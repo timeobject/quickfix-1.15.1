@@ -461,12 +461,12 @@ static bool DigitGenCounted(DiyFp w,
     ASSERT(digit <= 9);
     buffer[*length] = static_cast<char>('0' + digit);
     (*length)++;
-    requested_digits--;
+    //requested_digits--;
     integrals %= divisor;
     (*kappa)--;
     // Note that kappa now equals the exponent of the divisor and that the
     // invariant thus holds again.
-    if (requested_digits == 0) break;
+    //if (requested_digits == 0) break;
     divisor /= 10;
   }
 

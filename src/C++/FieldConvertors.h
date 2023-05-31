@@ -249,7 +249,7 @@ private:
 
 public:
 
-  static const int SIGNIFICANT_DIGITS = 15;
+  static const int SIGNIFICANT_DIGITS = 30;
   static const int BUFFFER_SIZE = 32;
 
   static std::string convert( double value, int padding = 0 )
