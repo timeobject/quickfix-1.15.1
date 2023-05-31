@@ -320,7 +320,7 @@ bool FastFixedDtoa(double v,
   // If necessary this limit could probably be increased, but we don't need
   // more.
   if (exponent > 20) return false;
-  if (fractional_count > 20) return false;
+  if (fractional_count > 30) return false;
   *length = 0;
   // At most kDoubleSignificandSize bits of the significand are non-zero.
   // Given a 64 bit integer we have 11 0s followed by 53 potentially non-zero
@@ -382,7 +382,7 @@ bool FastFixedDtoa(double v,
   } else if (exponent < -128) {
     // This configuration (with at most 20 digits) means that all digits must be
     // 0.
-    ASSERT(fractional_count <= 20);
+    ASSERT(fractional_count <= 30);
     buffer[0] = '\0';
     *length = 0;
     *decimal_point = -fractional_count;
