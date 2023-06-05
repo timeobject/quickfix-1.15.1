@@ -123,7 +123,7 @@ namespace FIX
     if( !isInRange( start, end, time1 ) ) return false;
     if( !isInRange( start, end, time2 ) ) return false;
 
-    if( time1 == time2 ) return true;
+    if( start == end || time1 == time2 ) return true;
 
     if( start < end || start == end )
     {
