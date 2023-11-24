@@ -13,6 +13,8 @@ endif()
 project(${quickfix_PROJECT_NAME} VERSION 0.1 LANGUAGES CXX C)
 message("-- Project name ${CMAKE_PROJECT_NAME}")
 
+set(CMAKE_CXX_STANDARD 11)
+
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 
 include(QuickfixPlatformSettings)
